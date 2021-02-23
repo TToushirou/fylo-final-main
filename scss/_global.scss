@@ -1,0 +1,61 @@
+@import "breakpoints";
+
+// Global Code Throughout Site Build. 
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+
+}
+
+
+//helper class for Header and Media Qs
+.wrapper {
+    padding: 25px 20px 50px 20px;
+    background: $darkBlueIntroBG url(../scss/images/bg-curvy-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+
+    @include breakpoint(medium) {
+        background: $darkBlueIntroBG url(../scss/images/bg-curvy-desktop.svg) no-repeat;
+        background-size: contain;
+        background-position: bottom center;
+    }
+
+    @include breakpoint(large) {
+        padding: 52px 80px;
+
+    }
+
+    .nav-brand img {
+        width: 95px;
+
+        @include breakpoint(small){
+            width: 150px;
+        }
+
+        @include breakpoint(large){
+            width: 180px;
+        }
+
+        @include breakpoint(xlarge){
+            width: 200px;
+        }
+
+
+    }
+
+    
+}

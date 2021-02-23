@@ -1,0 +1,225 @@
+@import "breakpoints";
+
+/**************  Nav Bar Positioning ***************/ 
+
+// Nav Bar Positoning
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    min-height: 9vh;
+}
+
+
+/************** Nav Link Positioning ***************/
+
+.navbar-items {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 60%;
+    word-wrap: none;
+    padding-bottom: 12px;
+
+    @include breakpoint(regular) {
+        max-width: 37%;
+    }
+
+    @include breakpoint(medium) {
+        max-width: 33%;
+    }
+
+    @include breakpoint(large) {
+        max-width: 30%;
+    }
+
+    @include breakpoint(xlarge) {
+        max-width: 20%;
+    }
+
+
+}
+
+
+/************** Basic Nav Link Styling ***************/
+
+
+// Nav Links color, size and font
+.navbar-items a {
+    color: white;
+    font-size: 14px;
+    font-family: $primaryFont;
+    margin-top: 16px;
+
+    @include breakpoint(small) {
+        font-size: 15.5px;
+    }
+
+    @include breakpoint(regular) {
+        font-size: 17px;
+    }
+
+    @include breakpoint(medium) {
+        font-size: 17.5px;
+    }
+
+    @include breakpoint(large) {
+        font-size: 18px;
+    }
+
+
+
+}
+
+// Nav Links decoration
+.navbar-items a:hover {
+    color: $cyan;
+    text-decoration: underline;
+}
+
+
+/************** End Of Nav  ***************/
+
+
+
+/************** Hero Positioning ***************/
+
+// Border Test of Hero Class
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;    
+}
+
+/************** Hero img Styling ***************/
+
+//Alt Tag Message 
+.hero-img {
+    color: $white;
+}
+
+// Hero img positioning
+.hero-img img {
+    margin: auto;
+    display: flex;
+    width: 75%;
+    max-width: 716px;
+
+}
+
+/************** Hero Content Styling  ***************/
+
+// Hero Text Color & Font
+.hero-text {
+    font-family: $primaryFont;
+    color: $white;
+}
+
+// H1 styling
+.hero-text h1 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+
+    @include breakpoint(small){
+        font-size: 26px;
+    }
+
+
+    @include breakpoint(regular){
+        font-size: 27.5px;
+        max-width: 80%;
+
+
+    }
+
+    @include breakpoint(medium){
+        font-size: 30px;
+        max-width: 70%;
+    }
+
+    @include breakpoint(large){
+        font-size: 35px;
+        max-width: 75%;
+        
+    }
+
+    @include breakpoint(xlarge){
+        font-size: 40px;
+        max-width: 55%;
+    }
+
+}
+
+// P Styling
+.hero-text p {
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include breakpoint(small){
+        font-size: 15px;
+        max-width: 85%;
+    }
+
+    @include breakpoint(regular){
+        font-size: 16px;
+        max-width: 82%;
+
+    }
+
+    @include breakpoint(medium){
+        font-size: 16.5px;
+        max-width: 60%;
+    }
+
+    @include breakpoint(large){
+        font-size: 17px;
+        max-width: 60%;
+    }
+
+    @include breakpoint(xlarge){
+        font-size: 18.5px;
+        max-width: 45%;
+    }
+
+}
+
+// Button Styling 
+.hero-text button {
+    font-weight:bold;
+    font-size: 14px;
+    color: $white;
+    background-color: $cyan; 
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(to right, $cyan, $blue);
+    margin: auto;
+    display: flex;
+    padding: 8px 50px;
+    margin-bottom: 5rem;
+
+    @include breakpoint(regular){
+        padding: 9px 60px;
+        font-size: 16px;
+
+    }
+
+    @include breakpoint(medium){
+        padding: 10px 70px;
+        font-size: 17px;
+    }
+}
+
+
+
+/************** End Of Hero  ***************/
+
